@@ -1,5 +1,5 @@
-let position = "X32010"
-let diagram = ["", "E A D g b e", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|"]
+//let position = "X32010"
+//let diagram = ["", "E A D g b e", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|"]
 
 
 var chords = makeChords("X32010")
@@ -37,3 +37,4 @@ function frette(pos, i) {
         .map(c => parseInt(c, 10) === i ? '@' : '|')
         .join(' ')
 }
+console.log(chords);
