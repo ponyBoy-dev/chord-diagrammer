@@ -1,0 +1,14 @@
+{
+  "name": "asciidiaggenerator",
+  "version": "1.0.0",
+  "description": "guitar chords diagrams generated in ascii",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ponyBoy",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  }
+}
