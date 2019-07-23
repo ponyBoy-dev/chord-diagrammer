@@ -2,14 +2,20 @@
 //let diagram = ["", "E A D g b e", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|", "", "|-|-|-|-|-|"]
 
 
-var chords = makeChords("X32010")
+//var chords = makeChords("022000")
+
+document.querySelector(".bouton").addEventListener('click', e => {
+    let position = document.querySelector(".champPos").value
+    document.querySelector(".result").innerHTML=makeChords(position)
+
+})
 
 function makeChords(pos) {
 
     
     const chords = [
         mainDroite(pos),
-        'E A D g b e',
+        '<u>E A D g b e</u>',
     ]
 
     const fretNums = pos.split('')
@@ -23,7 +29,7 @@ function makeChords(pos) {
     }
 
     console.log(chords.join('\n'));
-    return chords
+    return chords.join('\n')
 }
 
 
@@ -34,7 +40,7 @@ function mainDroite(pos) {
 }
 function frette(pos, i) { 
     return pos.split('')
-        .map(c => parseInt(c, 10) === i ? '@' : '|')
+        .map(c => parseInt(c, 10) === i ? '<b>@</b>' : '|')
         .join(' ')
 }
 console.log(chords);
